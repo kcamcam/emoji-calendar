@@ -44,11 +44,19 @@
             background-color: rgba(27,31,35,0.05);
             border-radius: 3px;
         }
+        pre{
+            padding: 1pc;
+            overflow: auto;
+            font-size: 85%;
+            line-height: 1.45;
+            background-color: #f6f8fa;
+            border-radius: 3px;
+        }
     </style>
   </head>
   <body>
-    <div class="container pt-3 pb-0">
-        <div class="row mx-3">
+    <div class="container pt-3 pb-0 px-5">
+        <div class="row">
             <div class="col-12 col-md-9 col-lg-10 text-center text-md-right">
                 <h1> Welcome to <strong>Emoji Calendar</strong> </h1>
                 <h1>
@@ -58,7 +66,7 @@
                 </h1>
             </div>
             <div class="col-12 col-md-3 col-lg-2 text-center text-md-left">
-                <h1 id="emoji-calendar" class="my-0">🗓</h1>
+                <h1 id="emoji-calendar" class="my-0">📆</h1>
             </div>
         </div>
     </div>
@@ -71,40 +79,98 @@
         </div>
     </div>
     
-    <div class="container">
+    <div class="container px-5 pb-3">
         <div class="row">
-            <div class="col-12 mx-5 mb-4">
-                <h2>What is Emoji Calendar</h2>
+            <!-- What is Emoji Calendar -->
+            <div class="col-12 mb-4">
+                <h3>What is Emoji Calendar</h3>
+                <br>
                 <span>
-                    Add a festive touch to your HTML all year round, 
-                    simply include a script and add an #id to an element. 
-                    <strong>Emoji Calendar</strong> will then automatically
-                    insert an festive emoji into the corresponding element 
-                    depending on the dat or the time of year.
+                    Add a festive touch to your HTML all year round, simply 
+                    include the script and add <code>#emoji-calendar</code> 
+                    ID to a block element. Emoji Calendar will  
+                    automatically insert a festive emoji into the corresponding 
+                    element depending on the date and the time of year.
                 </span>
                 <br>
                 <br>
-                <span>Check it out on GitHub 
-                    (<a href="https://github.com/kcamcam/emoji-calendar">github.com/emoji-calendar</a>)
-                </span>
+                <ul>
+                    <li>Check it out on GitHub 
+                        <a href="https://github.com/kcamcam/emoji-calendar">github.com/emoji-calendar</a>
+                    </li>
+                    <li>Check out the demo:
+                        <a href="https://kcamel.com/emoji-calendar">kcamel.com/emoji-calendar</a>
+                    </li>
+                    <li>Script CDN:
+                        <a href="https://cdn.jsdelivr.net/gh/kcamcam/emoji-calendar/emoji-calendar.js">
+                            https://cdn.jsdelivr.net/gh/kcamcam/emoji-calendar/emoji-calendar.js
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-12 mx-5 mb-4">
-                <h2>How to use Emoji Calendar</h2>
-                <span class="mx-2">1. Give an element on your page the id <code>#emoji-calendar</code></span>
+            <!-- How to use Emoji Calendar -->
+            <div class="col-12 mb-4">
+                <h3>How to use Emoji Calendar</h3>
                 <br>
-                <span class="mx-2">2. Add the script to the footer of your HTML page</span>
-                <br>
-                <span class="mx-2">&nbsp;&nbsp;</span>
-                <code>
-                    <<span>script src="https://cdn.jsdelivr.net/gh/kcamcam/emoji-calendar/emoji-calendar.js"</span>><<span>/script</span>>
-                </code>
-                <br>
-                <span class="mx-2">3. Thats all</span>
+                <ol>
+                    <li> Give an element on your page the id <code>#emoji-calendar</code></li>
+                    
+                    <li> Add the script to the footer of your HTML page
+                        <br>
+                        <code>
+                            <<span>script src="https://cdn.jsdelivr.net/gh/kcamcam/emoji-calendar/emoji-calendar.js"
+                            </span>><<span>/script</span>>
+                        </code>
+                    </li>
+                    <li> Thats all</li>
+                    <li>
+                        <strong>Optional</strong>: sepcify a custom emoji by calling the <code>insertEmoji("🙂");</code> 
+                        after the script.
+                    </li>
+                </ol>
             </div>
-            <div class="col-12 mx-5 mb-5">
-                <h2>Note:</h2>
-                <span>Corresponding holidays are official Canadian holidays only.</span>
+            
+            <!-- Template -->
+            <div class="col-12 mb-4">  
+                <h3>Template</h3>
+                <br>
+<pre>
+<<span>!DOCTYPE html</span>>
+<<span>html</span>>
+<<span>head</span>>
+    <<span>meta charset="utf-8"</span>>
+<<span>/head</span>>
+<<span>body</span>>
+    <<span>span id="emoji-calendar"</span>>📆<<span>/span</span>>
+    <<span>script src="https://cdn.jsdelivr.net/gh/kcamcam/emoji-calendar/emoji-calendar.js"</span>><<span>/script</span>>
+    <<span>script</span>>
+        // Optional for a custom emoji
+        insertEmoji("🙂");
+    <<span>/script</span>>
+<<span>/body</span>>
+<<span>/html</span>>
+</pre>
             </div>
+
+            <!-- Notes -->
+            <div class="col-12 mb-5">
+                <h3>Notes</h3>
+                <br>
+                <ul>
+                    <li>Corresponding holidays are official Canadian holidays only.</li>
+                    <li>
+                        Max <code>font-size</code> for an emoji is <code>8em</code>. 
+                        I have clue why 🤔
+                    </li>
+                    <li>
+                        Make sure to specify the 
+                        <code>charset=UTF-8</code> 
+                        in the <code><<span>head<span>></code> section if not 
+                        most emojis wont get rendered.
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </div>
 

@@ -50,6 +50,8 @@ let thanks_giving = (
 let halloween = (
     current_month == 10 && 
     (current_day >= 25 && current_day <= 31));
+// Rememberance Day - November 11th
+let rememberance = (current_month == 11 && current_day == 11);
 // Christmas - December 12th to 30th
 let christmas = (
     current_month == 12 &&
@@ -67,7 +69,7 @@ function getEmoji(default_emoji){
     }else if (st_pats_day){
         return "🍀";
     }else if (easter){
-        return "🐰🥚";
+        return "🐣";
     }else if (victoria_day){
         return "👸";
     }else if (st_jean){
@@ -82,6 +84,8 @@ function getEmoji(default_emoji){
         return "🦃";
     }else if (halloween){
         return "🎃";
+    }else if (rememberance){
+        return "🎖";
     }else if (christmas){
         return "🎄";
     }else if (boxing_day){
@@ -151,3 +155,5 @@ function insertEmoji(default_emoji){
     document.getElementById("emoji-calendar").innerHTML = curr_emoji;
     return curr_emoji;
 }
+
+insertEmoji("📆");

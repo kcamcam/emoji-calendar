@@ -12,7 +12,7 @@
 
 
 // get date range
-let start_date = new Date("06/01/2018");
+let start_date = new Date("11/01/2018");
 // let end_date = new Date("12/31/2018");
 let dates = [start_date];
 
@@ -65,6 +65,8 @@ function writeShit(current_year, current_month, current_day) {
     let halloween = (
         current_month == 9 && 
         (current_day >= 25 && current_day <= 31));
+    // Rememberance Day - November 11th
+    let rememberance = (current_month == 10 && current_day == 11);        
     // Christmas - December 12th to 30th
     let christmas = (
         current_month == 11 &&
@@ -144,7 +146,7 @@ function writeShit(current_year, current_month, current_day) {
         }else if (st_pats_day){
             return "🍀";
         }else if (easter){
-            return "🐰";
+            return "🐣";
         }else if (victoria_day){
             return "👸";
         }else if (st_jean){
@@ -159,6 +161,8 @@ function writeShit(current_year, current_month, current_day) {
             return "🦃";
         }else if (halloween){
             return "🎃";
+        }else if (rememberance){
+            return "🎖";
         }else if (christmas){
             return "🎄";
         }else if (boxing_day){
@@ -166,7 +170,7 @@ function writeShit(current_year, current_month, current_day) {
         }else if (new_years_eve){
             return "🎊";
         }else {
-            return "🗓";
+            return "📆";
         }
     }
     
