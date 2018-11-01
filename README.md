@@ -1,6 +1,8 @@
 ## What is Emoji Calendar
 
-Add a festive touch to your HTML all year round, simply include the script and add an #id to an element. Emoji Calendar will then automatically insert an festive emoji into the corresponding element depending on the dat or the time of year.
+Add a festive touch to your HTML all year round, simply include the script and add `#emoji-calendar` id to a block element. Emoji Calendar will then automatically insert an festive emoji into the corresponding element depending on the dat or the time of year.
+
+Check it out on GitHub [github.com/emoji-calendar](https://github.com/kcamcam/emoji-calendar)
 
 ## How to use Emoji Calendar
 
@@ -10,4 +12,6 @@ Add a festive touch to your HTML all year round, simply include the script and a
 3. Thats all
 
 ## Note:
-Corresponding holidays are official Canadian holidays only.
+- Corresponding holidays are official Canadian holidays only.  
+- Max font-size for an emoji is 8em. I have clue why 🤔
+
